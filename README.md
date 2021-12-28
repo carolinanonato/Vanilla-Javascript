@@ -8,4 +8,5 @@ The projects are designed to building things using HTML5, CSS & JavaScript with 
 | 01  |  [Form Validator](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Form-validator) | 
 | 02  |  [Movie Seat Booking](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Movie-Seat-Booking) |  
 | 03  |  [Custom Video Player](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Custom-Video-Player) |
-| 04  |  [Exchange Rate Calculator](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Exchange-Rate-Calculator) |
+| 04  |  [Exchange Rate Calculator](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Exchange-Rate-Calculator) 
+| 05  |  [DOM Array Methods](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/DOM-Array-Methods) |
