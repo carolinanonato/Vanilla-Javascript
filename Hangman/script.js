@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words= ['popi', 'dog', 'pipa', 'popidog', 'bibo', 'piporina', 'bruno', 'carol', 'croissant'];
+const words= ['programming', 'javascript', 'frontend', 'html', 'application', 'interface'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)]
 
@@ -42,7 +42,33 @@ function displayWord() {
 //update the wrong letters
 
 function updateWrongLettersEl () {
-    console.log('Update Wrong')
+
+    //display wrong letters
+    wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+    `;
+
+
+      //display figure parts
+    figureParts.forEach((part, index) => {
+        const errors = wrongLetters.length;
+
+        if (index < errors) {
+            part.style.display = 'block'
+        } else {
+            part.style.display = 'none'
+        }
+    });
+
+
+        //check if lost 
+    if (wrongLetters.length === figureParts.length) {   
+        finalMessage.innerText = 'Unfurtunately you lost';
+        popup.style.display='flex'
+
+    }
+
 }
 
 
@@ -58,32 +84,49 @@ function showNotification () {
 
 
 
-
-//keydown letter press
+// Keydown letter press
 window.addEventListener('keydown', e => {
-    // console.log(e.keyCode)
-   if(e.keyCode >= 65 && e.keyCode <= 90) {
-       const letter = e.key;
-       if(!correctLetters.includes(letter)) {
-           correctLetters.push(letter);
+    // console.log(e.keyCode);
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+      const letter = e.key;
+  
+      if (selectedWord.includes(letter)) {
+        if (!correctLetters.includes(letter)) {
+          correctLetters.push(letter);
+  
+          displayWord();
+        } else {
+          showNotification();
+        }
+      } else {
+        if (!wrongLetters.includes(letter)) {
+          wrongLetters.push(letter);
+  
+          updateWrongLettersEl();
+        } else {
+          showNotification();
+        }
+      }
+    }
+  });
 
-           displayWord();
-       } else {
-           showNotification();
-       }
-   } else {
-       if (!wrongLetters.includes(letter)) {
-        wrongLetters.push(letter);
 
-    updateWrongLettersEl()
+  // restart the game and play again
 
-       } else {
-           showNotification();
-       }
-    
-   }
-})
+  playAgainBtn.addEventListener('click', () => {
+        //empty arrays
 
+        correctLetters.splice(0);
+        wrongLetters.splice(0);
+
+        selectedWord = words[Math.floor(Math.random() * words.length)]
+
+        displayWord();
+
+        updateWrongLettersEl();
+
+        popup.style.display='none'
+  });
 
 displayWord();
 
