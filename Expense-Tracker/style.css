@@ -148,3 +148,7 @@ input[type="number"] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+.amountclass {
+  font-size: 12px;
+}
