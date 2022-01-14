@@ -14,4 +14,6 @@ The projects are designed to building things using HTML5, CSS & JavaScript with 
 | 07  |  [Hangman](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Hangman) |
 | 08  |  [Meal Finder](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Meal-Finder) |
 | 09  |  [Expense Tracker](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Expense-Tracker) |
+| 10  |  [Music Player](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Music-Player) |
+| 11  |  [Infinite Scroll](https://github.com/carolinanonato/Vanilla-Javascript/tree/master/Infinite-Scroll) |
 
