@@ -68,6 +68,7 @@ const data = [
     const { image, text } = item;
 
     box.classList.add('box')
+    
     box.innerHTML = `
     <img src="${image}" alt="${text}" />
     <p class="info">${text}<p>`
