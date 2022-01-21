@@ -10,3 +10,5 @@ Game to beat the clock by typing random words
 - Implement timer
 - Add certain amount of time after word is typed based on difficulty
 - Store difficulty setting in local storage
+
+![typing-game](https://user-images.githubusercontent.com/44845754/149444762-8f535823-bcfc-4688-9c01-671e75a897b2.gif)
